@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+        <title>Page Title</title>
+
+        <link rel="stylesheet" href="css/main.css">
+        <script src="js/main.js"></script>
+    </head>
+    <body>
+
+        <form class="styletext__form" id="styletext" data-styletext-form>
+            <header class="styletext__header">
+                <div class="styletext__input-group">
+                    <div class="styletext__input-group__item">
+                        <label>
+                            <select name="font-family">
+                                <option selected>Arial</option>
+                                <option>Arial Black</option>
+                                <option>Helvetica Neue</option>
+                                <option>Helvetica</option>
+                                <option>Courier New</option>
+                                <option>Comic Sans MS</option>
+                                <option>Roboto</option>
+                                <option>Oswald</option>
+                                <option>Noto Sans</option>
+                                <option>Inter</option>
+                                <option>Quicksand</option>
+                                <option>Inconsolata</option>
+                                <option>Bebas Neue</option>
+                                <option>Anton</option>
+                                <option>Lobster</option>
+                                <option>EB Garamond</option>
+                                <option>Space Mono</option>
+                            </select>
+                        </label>
+                    </div>
+                    <div class="styletext__input-group__item">
+                        <label>
+                            <input type="checkbox" name="font-weight-bold"> <b>B</b>
+                        </label>
+                    </div>
+                    <div class="styletext__input-group__item">
+                        <label>
+                            <input type="checkbox" name="font-style-italic"> <i>I</i>
+                        </label>
+                    </div>
+                    <div class="styletext__input-group__item">
+                        <label>
+                            fg
+                            <input type="color" name="color" value="#ffffff">
+                        </label>
+                    </div>
+                    <div class="styletext__input-group__item">
+                        <label>
+                            bg
+                            <input type="color" name="background-color" value="#000000">
+                        </label>
+                    </div>
+                    <div class="styletext__input-group__item">
+                        <label>
+                            <input type="number" name="font-size" min="9" max="216" value="16">px
+                        </label>
+                    </div>
+                    <div class="styletext__input-group__item">
+                        <label>
+                            <select name="text-align">
+                                <option selected>left</option>
+                                <option>center</option>
+                                <option>right</option>
+                            </select>
+                        </label>
+                    </div>
+                    <div class="styletext__input-group__item">
+                        <label>
+                            Shadow
+                            <input type="number" name="text-shadow-size" min="0" max="32">
+                        </label>
+                        <label>
+                            <input type="color" name="text-shadow-color" value="#000000">
+                        </label>
+                    </div>
+                    <div class="styletext__input-group__item styletext__input-group__item--no-border">
+                        <label>
+                            <button data-styletext-preset="loudAsFuck">Loud AF</button>
+                        </label>
+                    </div>
+                    <div class="styletext__input-group__item styletext__input-group__item--no-border">
+                        <label>
+                            <button data-styletext-preset="loudAsFuck2">Loud AF 2</button>
+                        </label>
+                    </div>
+
+                    <!--
+                    <div class="styletext__input-group__item">
+                    </div>
+                    <div class="styletext__input-group__item">
+                    </div>
+                    <div class="styletext__input-group__item">
+                    </div>
+                    <div class="styletext__input-group__item">
+                    </div>
+                    -->
+                </div>
+            </header>
+            <textarea class="styletext__textarea" name="text-area"
+                      placeholder="Lorem ipsum dolor..."></textarea>
+            <footer class="styletext__footer">
+            </footer>
+        </form>
+
+        <script>
+            var st = new StyleText('styletext');
+        </script>
+
+    </body>
+</html>

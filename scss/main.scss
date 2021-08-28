@@ -1,0 +1,99 @@
+@import "../node_modules/normalize.css/normalize";
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+:root {
+    --background-color: #ccccff;
+    --input-group-border-width: 1px;
+    --input-group-border-style: solid;
+    --input-group-border-top-color: white;
+    --input-group-border-left-color: white;
+    --input-group-border-right-color: black;
+    --input-group-border-bottom-color: black;
+    --widget-border-width: 1px;
+    --widget-border-style: solid;
+    --widget-border-top-color: white;
+    --widget-border-left-color: rgba(255, 255, 255, 0.5);
+    --widget-border-right-color: rgba(0, 0, 0, 0.125);
+    --widget-border-bottom-color: black;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+html {
+    margin: 0;
+    padding: 0;
+}
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    > .styletext__form {
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        > .styletext__textarea {
+            width: 100%;
+            flex-grow: 1;
+            padding: 8px 16px;
+            &::placeholder {
+                opacity: 0.25;
+            }
+            &:focus {
+                outline: none;
+            }
+        }
+    }
+}
+.styletext__header {
+    background-color: var(--background-color);
+}
+.styletext__input-group {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    flex-wrap: wrap;
+}
+.styletext__input-group__item {
+    display: block;
+    line-height: 2;
+    white-space: nowrap;
+    border-width: var(--input-group-border-width);
+    border-style: var(--input-group-border-style);
+    border-top-color: var(--input-group-border-top-color);
+    border-left-color: var(--input-group-border-left-color);
+    border-right-color: var(--input-group-border-right-color);
+    border-bottom-color: var(--input-group-border-bottom-color);
+    > label {
+        padding-left: .5rem;
+        padding-right: .5rem;
+    }
+}
+.styletext__input-group__item--no-border {
+    border-width: 0;
+}
+button, select {
+    background-color: inherit;
+    border-width: var(--widget-border-width);
+    border-style: var(--widget-border-style);
+    border-top-color: var(--widget-border-top-color);
+    border-left-color: var(--widget-border-left-color);
+    border-right-color: var(--widget-border-right-color);
+    border-bottom-color: var(--widget-border-bottom-color);
+    border-radius: 0;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.125), transparent, rgba(255, 255, 255, 0.5));
+}
