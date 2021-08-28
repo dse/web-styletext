@@ -118,6 +118,7 @@ StyleText.presets = {
         fontWeight: "bold",
         textAlign: "center",
         textShadowColor: "#000000",
+        textShadowSize: 8
     },
     loudAsFuck2: {
         backgroundColor: "#000000",
@@ -128,6 +129,7 @@ StyleText.presets = {
         fontWeight: "normal",
         textAlign: "left",
         textShadowColor: "#333333",
+        textShadowSize: 4
     }
 };
 Object.assign(StyleText.prototype, {
