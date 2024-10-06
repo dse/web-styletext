@@ -1,7 +1,9 @@
 SSH_DEST = dse@webonastick.com
-REPOS_NAME = web-styletext
 REPOS_DIR = ~/git/dse.d/web-styletext
 REPOS_URL = git@github.com:dse/web-styletext.git
+SYMLINK = /www/webonastick.com/htdocs/styletext
+
+DOCUMENT_ROOT = $(REPOS_DIR)
 
 publish:
 	ssh $(SSH_DEST) '\
@@ -10,4 +12,4 @@ publish:
 		else \
 			cd "$$(dirname $(REPOS_DIR))" && git clone $(REPOS_URL) ; \
 		fi ; \
-		ln -n -f -s $(REPOS_DIR) /www/webonastick.com/htdocs/styletext'
+		ln -n -f -s $(DOCUMENT_ROOT) $(SYMLINK)'
